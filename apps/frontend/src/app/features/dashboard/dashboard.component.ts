@@ -104,7 +104,6 @@ import { Task } from '@libsData';
     <h1 style="margin-bottom: 1rem;">Tasks for {{ user?.organization }}</h1>
     <div *ngFor="let task of tasks" style="border-top: 1px solid #d1d5db; border-bottom: 1px solid #d1d5db; width: 100%; padding-top: 0.5rem; padding-bottom: 0.5rem;">
       <p>Task ID: {{ task.taskId }}</p>
-      <p>Employee ID: {{ task.employeeId }}</p>
       <p>Description: {{ task.description }}</p>
       <button *ngIf="user?.role === 'admin' || user?.role === 'manager'" 
               (click)="deleteTask(task.taskId)"
